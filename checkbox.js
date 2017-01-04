@@ -84,7 +84,7 @@ class CheckBox extends Component {
         }
 
         return (
-            <TouchableHighlight onPress={this.onChange} underlayColor={this.props.underlayColor} style={styles.flexContainer}>
+            <TouchableHighlight onPress={this.onChange} underlayColor={this.props.underlayColor}>
                 {container}
             </TouchableHighlight>
         );
@@ -102,13 +102,14 @@ var styles = StyleSheet.create({
         height: 26
     },
     labelContainer: {
+        flex: 1,
         marginLeft: 10,
         marginRight: 10,
     },
     label: {
         fontSize: 15,
         color: 'grey'
-    }
+    },
 });
 
 CheckBox.propTypes = {
